@@ -24,6 +24,9 @@ const BlogPostTemplate = ({ data, location }) => {
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
+          {post.frontmatter.image && (
+            <img width={540} src={post.frontmatter.image} alt="post avatar" />
+          )}
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -84,6 +87,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        image
         description
       }
     }
