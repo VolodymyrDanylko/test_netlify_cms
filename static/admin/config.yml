@@ -19,9 +19,9 @@ collections:
           name: "author",
           widget: "relation",
           collection: "authors",
-          valueField: "email",
-          searchFields: ["name"],
-          displayFields: ["name", "email"],
+          value_field: "email",
+          search_fields: ["name"],
+          display_fields: ["name", "email"],
         }
   - name: authors
     label: Authors
