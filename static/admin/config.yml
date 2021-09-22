@@ -25,7 +25,7 @@ collections:
         }
   - name: authors
     label: Authors
-    folder: content/authors
+    folder: content/blog/_authors/
     format: json
     create: true
     slug: "{{name}}"
