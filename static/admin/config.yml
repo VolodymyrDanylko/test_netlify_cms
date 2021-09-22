@@ -19,13 +19,14 @@ collections:
           name: "author",
           widget: "relation",
           collection: "authors",
-          value_field: ["name", "email"],
-          search_fields: ["name"],
+          value_field: "email",
+          search_fields: ["name", "email"],
           display_fields: ["name"],
         }
   - name: authors
     label: Authors
     folder: content/authors
+    format: json
     create: true
     slug: "{{name}}"
     fields:
