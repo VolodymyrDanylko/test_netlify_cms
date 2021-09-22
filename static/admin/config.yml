@@ -17,6 +17,19 @@ collections:
       - {
           label: "Author",
           name: "author",
-          widget: "string",
-          default: "{{user.name}}",
+          widget: "relation",
+          collection: "authors",
+          valueField: "email",
+          searchFields: ["name"],
+          displayFields: ["name", "email"],
         }
+  - name: authors
+    label: Authors
+    folder: content/authors
+    create: true
+    slug: "{{name}}"
+    fields:
+      - { label: Name, name: name, widget: string }
+      - { label: Title, name: title, widget: string }
+      - { label: Email, name: email, widget: string }
+      - { label: Image, name: authorimage, widget: image }
