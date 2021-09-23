@@ -131,5 +131,8 @@ module.exports = {
         path: `${__dirname}/content/blog`,
       },
     },
+    {
+      resolve: "gatsby-transformer-remark",
+    },
   ],
 }
