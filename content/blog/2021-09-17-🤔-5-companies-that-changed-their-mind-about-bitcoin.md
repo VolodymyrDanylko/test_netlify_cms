@@ -3,6 +3,7 @@ layout: blog
 title: 🤔 5 companies that changed their mind about Bitcoin.
 date: 2021-09-17T09:54:30.330Z
 image: /images/uploads/bamboo_lifestyleshoot-js-web-104.jpg
+featuredimage: bamboo_lifestyleshoot-js-web-48.jpg
 author: craig@getbamboo.io
 ---
 Bitcoin is looking stronger than ever and will soon be celebrating its 13th birthday on 9 January 2022. Yet, for such a young asset, it sure has suffered its [fair share of death](https://99bitcoins.com/bitcoin-obituaries/).
