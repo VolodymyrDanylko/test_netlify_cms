@@ -7,8 +7,6 @@ collections:
   - name: "blog"
     label: "Blog"
     folder: "content/blog"
-    media_folder: ""
-    public_folder: ""
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -29,8 +27,6 @@ collections:
   - name: authors
     label: Authors
     folder: content/blog/_authors/
-    public_folder: ""
-    media_folder: ""
     format: json
     create: true
     slug: "{{name}}"
