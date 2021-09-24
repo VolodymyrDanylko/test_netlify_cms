@@ -31,7 +31,7 @@ const BlogIndex = ({ data, location }) => {
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
-
+          console.log(post.frontmatter.image)
           return (
             <li key={post.fields.slug}>
               <article
@@ -56,10 +56,10 @@ const BlogIndex = ({ data, location }) => {
                   />
                 )} */}
 
-                <GatsbyImage
+                {/* <GatsbyImage
                   image={post.frontmatter.image}
                   alt="{data.blogPost.author}"
-                />
+                /> */}
                 <section>
                   <p
                     dangerouslySetInnerHTML={{
@@ -95,15 +95,7 @@ export const pageQuery = graphql`
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           title
-          image {
-            childImageSharp {
-              gatsbyImageData(
-                width: 200
-                placeholder: BLURRED
-                formats: [AUTO, WEBP, AVIF]
-              )
-            }
-          }
+          image
           description
         }
       }
