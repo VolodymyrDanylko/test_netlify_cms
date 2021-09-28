@@ -24,6 +24,10 @@ While Dimon insists that his personal views on the crypto market haven’t chang
 
 After publishing an article in early 2020 stating that “Cryptocurrencies, including bitcoin, are not an asset class,” major investment bank Goldman Sachs has since changed its tune. A new [study](https://www.goldmansachs.com/insights/pages/crypto-a-new-asset-class.html) released earlier this year by the company notes how “the intrinsic characteristics of certain cryptocurrencies allow them to attract a specific user base.” In particular, the Goldman Sachs report mentions Bitcoin’s high market cap, Ethereum’s smart contracts, XRP’s real-time settlement, and Polkadot’s cross-chain capabilities.
 
+
+
+![some test alt](assets/craig.png)
+
 Earlier this year, Goldman Sachs began offering some of its clients access to Bitcoin derivative products that allow them to invest and profit from crypto markets. Now, one of its biggest competitors, Citibank, looks to be [exploring a similar product.](https://markets.businessinsider.com/news/currencies/citigroup-bank-crypto-bitcoin-futures-ethereum-goldman-sachs-cme-derivatives-2021-08)
 
 # Mises Institute
