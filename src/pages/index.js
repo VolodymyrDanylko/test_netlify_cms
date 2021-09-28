@@ -31,7 +31,11 @@ const BlogIndex = ({ data, location }) => {
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
-          console.log(post.frontmatter.image)
+
+          //const imgPath = "../../static/" + post.frontmatter.featuredimage
+          const image =
+            post?.frontmatter?.featuredimage?.childImageSharp?.gatsbyImageData
+
           return (
             <li key={post.fields.slug}>
               <article
@@ -56,10 +60,7 @@ const BlogIndex = ({ data, location }) => {
                   />
                 )} */}
 
-                {/* <GatsbyImage
-                  image={post.frontmatter.image}
-                  alt="{data.blogPost.author}"
-                /> */}
+                <GatsbyImage image={image} />
                 <section>
                   <p
                     dangerouslySetInnerHTML={{
@@ -95,7 +96,11 @@ export const pageQuery = graphql`
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           title
-          image
+          featuredimage {
+            childImageSharp {
+              gatsbyImageData(layout: CONSTRAINED)
+            }
+          }
           description
         }
       }

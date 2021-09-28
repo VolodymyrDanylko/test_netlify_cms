@@ -6,6 +6,7 @@ image: /images/uploads/bamboo_lifestyleshoot-js-web-104.jpg
 featuredimage: assets/bamboo_lifestyleshoot-js-web-92.jpg
 author: craig@getbamboo.io
 ---
+
 Bitcoin is looking stronger than ever and will soon be celebrating its 13th birthday on 9 January 2022. Yet, for such a young asset, it sure has suffered its [fair share of death](https://99bitcoins.com/bitcoin-obituaries/).
 
 Crypto skeptics have been calling Bitcoin’s end pretty much for as long as it’s existed and yet it continues to climb and outperform almost any other asset on Earth. While some critics like Nouriel Roubini and Nassim Taleb are too deep in their conviction to ever admit error, forward-thinking bankers and business owners are slowly realizing Bitcoin’s potential.
@@ -17,6 +18,7 @@ Here we look at some of the big-name companies that have changed their minds abo
 JPMorgan Chase CEO Jamie Dimon is probably one of the most infamous and vocal Bitcoin critics, calling the asset a scam on multiple occasions. In fact, at one point in 2017, he even [threatened to fire](https://www.afr.com/companies/financial-services/jamie-dimon-would-fire-any-employee-trading-bitcoin-for-being-stupid-20170913-gyg7n0) any of his employees stupid enough to invest in the coin.
 
 While Dimon insists that his personal views on the crypto market haven’t changed, his bank certainly seems to be excited about digital assets. JPMorgan created its own US dollar-backed digital stablecoin, JPM Coin, in 2020, and has since introduced a blockchain unit and provided its clients [access to crypto investment options](https://www.entrepreneur.com/article/379597). As far as we are aware, no employees were fired in the making of these products.
+![A Bar graph showing the changes in total gold reserves over the last 12 months.](assets/bamboo_lifestyleshoot-js-web-29.jpg)
 
 # Goldman Sachs
 
