@@ -51,7 +51,7 @@ collections:
   - name: team
     label: Team
     folder: content/team
-    ormat: json
+    format: json
     create: true
     slug: "{{name}}"
     fields:
