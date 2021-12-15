@@ -38,7 +38,7 @@ collections:
 
   - name: podcast
     label: Podcast
-    folder: content/podcast
+    folder: content/_podcast
     format: json
     create: true
     slug: "{{title}}"
@@ -50,7 +50,7 @@ collections:
 
   - name: team
     label: Team
-    folder: content/team
+    folder: content/_team
     format: json
     create: true
     slug: "{{name}}"
