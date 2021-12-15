@@ -48,23 +48,23 @@ collections:
       - { label: AudioLink, name: audio, widget: string }
       - { label: Image, name: podcastImage, widget: image }
 
-    - name: team
-      label: Team
-      folder: content/team
-      ormat: json
-      create: true
-      slug: '{{name}}'
-      fields:
-        - { label: Name, name: name, widget: string }
-        - { label: Title, name: title, widget: string }
-        - {
-            label: Order,
-            name: order,
-            widget: number,
-            value_type: int,
-            min: 1,
-            default: null,
-            required: false,
-          }
-        - { label: LinkedIn, name: linkedin, widget: string, required: false }
-        - { label: Image, name: image, widget: image }
+  - name: team
+    label: Team
+    folder: content/team
+    ormat: json
+    create: true
+    slug: "{{name}}"
+    fields:
+      - { label: Name, name: name, widget: string }
+      - { label: Title, name: title, widget: string }
+      - {
+          label: Order,
+          name: order,
+          widget: number,
+          value_type: int,
+          min: 1,
+          default: null,
+          required: false,
+        }
+      - { label: LinkedIn, name: linkedin, widget: string, required: false }
+      - { label: Image, name: image, widget: image }
