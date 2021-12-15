@@ -9,6 +9,7 @@ import Seo from "../components/seo"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
+  const podcasts = data.allPodcastJson.nodes
 
   if (posts.length === 0) {
     return (
@@ -32,7 +33,6 @@ const BlogIndex = ({ data, location }) => {
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
-          //const imgPath = "../../static/" + post.frontmatter.featuredimage
           const image =
             post?.frontmatter?.featuredimage?.childImageSharp?.gatsbyImageData
 
@@ -74,6 +74,17 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </ol>
+
+      {podcasts.map((item, index) => {
+        const image = item?.podcastImage?.childImageSharp?.gatsbyImageData
+        return (
+          <div key={index}>
+            <GatsbyImage image={image} />
+            <h3>{item.title}</h3>
+            <div>{item.audio}</div>
+          </div>
+        )
+      })}
     </Layout>
   )
 }
@@ -102,6 +113,17 @@ export const pageQuery = graphql`
             }
           }
           description
+        }
+      }
+    }
+    allPodcastJson {
+      nodes {
+        audio
+        title
+        podcastImage {
+          childImageSharp {
+            gatsbyImageData(layout: CONSTRAINED, width: 335, quality: 100)
+          }
         }
       }
     }

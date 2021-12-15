@@ -1,20 +1,22 @@
 backend:
   name: git-gateway
   branch: main
+
 media_folder: static/assets
 public_folder: assets
+
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
+  - name: blog
+    label: Blog
+    folder: content/blog
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown", required: false }
-      - { label: "image", name: "featuredimage", widget: image }
+      - { label: Layout, name: layout, widget: hidden, default: blog }
+      - { label: Title, name: title, widget: string }
+      - { label: Publish Date, name: date, widget: datetime }
+      - { label: Body, name: body, widget: markdown, required: false }
+      - { label: image, name: featuredimage, widget: image }
       - {
           label: "Author",
           name: "author",
@@ -38,7 +40,7 @@ collections:
 
   - name: podcast
     label: Podcast
-    folder: content/_podcast
+    folder: content/podcast
     format: json
     create: true
     slug: "{{title}}"
@@ -47,24 +49,3 @@ collections:
       - { label: Publish Date, name: date, widget: datetime }
       - { label: AudioLink, name: audio, widget: string }
       - { label: Image, name: podcastImage, widget: image }
-
-  - name: team
-    label: Team
-    folder: content/_team
-    format: json
-    create: true
-    slug: "{{name}}"
-    fields:
-      - { label: Name, name: name, widget: string }
-      - { label: Title, name: title, widget: string }
-      - {
-          label: Order,
-          name: order,
-          widget: number,
-          value_type: int,
-          min: 1,
-          default: null,
-          required: false,
-        }
-      - { label: LinkedIn, name: linkedin, widget: string, required: false }
-      - { label: Image, name: image, widget: image }
