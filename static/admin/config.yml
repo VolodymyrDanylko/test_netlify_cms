@@ -70,3 +70,29 @@ collections:
         }
       - { label: LinkedIn, name: linkedin, widget: string, required: false }
       - { label: Image, name: image, widget: image }
+
+
+  - name: partners
+    label: Partners
+    folder: content/partners
+    create: true
+    widget: object
+    fields:
+      - { name: path, label: Path }
+      - name: sectionFAQ
+        label: Section FAQ
+        widget: object
+        requried: false
+        fields:
+          - { name: title, label: Title, widget: string }
+          - {
+          name: content,
+          label: Content,
+          required: false,
+          widget: list,
+          fields:
+            [
+              { name: title, label: Title, widget: string },
+              { name: answer, label: Answer, widget: string },
+            ],
+        }
