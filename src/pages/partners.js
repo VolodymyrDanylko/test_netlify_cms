@@ -15,20 +15,22 @@ const PartnersPage = ({ data, location }) => {
       <h1>{path}</h1>
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
 
-      <section>
-        <div>
+      {sectionFAQ.content?.length > 0 && (
+        <section>
           <div>
-            <h2>{sectionFAQ.title}</h2>
-            {sectionFAQ.content &&
-              sectionFAQ.content.map(({ question, answer }, index) => (
+            <div>
+              <h2>{sectionFAQ.title}</h2>
+              {sectionFAQ.content.map(({ question, answer }, index) => (
                 <div key={index}>
                   <div>{question}</div>
                   <div>{answer}</div>
+                  <div>answer</div>
                 </div>
               ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </Layout>
   )
 }

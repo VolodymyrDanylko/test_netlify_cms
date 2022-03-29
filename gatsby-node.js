@@ -93,6 +93,16 @@ exports.createSchemaCustomization = ({ actions }) => {
       summary: String
     }
 
+    type SectionFAQ {
+      title: String
+      content: [Content]
+    }
+
+    type Content {
+      question: String
+      answer: String
+    }
+
     type Social {
       twitter: String
     }
@@ -107,6 +117,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
       date: Date @dateformat
       authorFull: AuthorsJson @link(by: "email", from: "author")
+      sectionFAQ: SectionFAQ
     }
 
     type Fields {
