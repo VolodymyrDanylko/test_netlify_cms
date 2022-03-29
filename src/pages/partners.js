@@ -1,5 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
+import ReactHtmlParser from "react-html-parser"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -20,11 +21,11 @@ const PartnersPage = ({ data, location }) => {
           <div>
             <div>
               <h2>{sectionFAQ.title}</h2>
-              {sectionFAQ.content.map(({ question, answer }, index) => (
+              {sectionFAQ.content.map(({ question }, index) => (
                 <div key={index}>
                   <div>{question}</div>
-                  <div>{answer}</div>
-                  <div>answer</div>
+                  {/* <div>{ReactHtmlParser(answer)}</div>
+                  <div>answer</div> */}
                 </div>
               ))}
             </div>
@@ -45,7 +46,6 @@ export const pageQuery = graphql`
         sectionFAQ {
           title
           content {
-            answer
             question
           }
         }
