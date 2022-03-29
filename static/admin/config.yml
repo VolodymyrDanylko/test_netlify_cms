@@ -92,6 +92,6 @@ collections:
               fields:
                 [
                   { name: question, label: Question, widget: string },
-                  { name: answer, label: Answer, widget: string },
+                  { name: answer, label: Answer, widget: markdown },
                 ],
             }
