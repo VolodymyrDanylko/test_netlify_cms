@@ -13,7 +13,9 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: Layout, name: layout, widget: hidden, default: blog }
+      - { label: Slug, name: url, widget: string }
       - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: string }
       - { label: Publish Date, name: date, widget: datetime }
       - { label: Body, name: body, widget: markdown, required: false }
       - { label: image, name: featuredimage, widget: image }
@@ -26,6 +28,7 @@ collections:
           search_fields: ["name", "email"],
           display_fields: ["name"],
         }
+
   - name: authors
     label: Authors
     folder: content/blog/_authors/
@@ -90,4 +93,4 @@ collections:
             widget: list
             fields:
               - { name: question, label: Question, widget: string }
-              - { name: body, label: Body, widget: markdown }
+              - { name: answer, label: Answer, widget: markdown }

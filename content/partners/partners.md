@@ -4,7 +4,7 @@ sectionFAQ:
   title: Frequently Asked Questions
   content:
     - question: Q1
-      body: |-
+      answer: |-
         A1
 
 
@@ -12,7 +12,7 @@ sectionFAQ:
         * b
         * c
     - question: Q2
-      body: |-
+      answer: |-
         A2
 
         1. a

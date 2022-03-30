@@ -115,6 +115,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     type Frontmatter {
       title: String
       description: String
+      url: String
       date: Date @dateformat
       authorFull: AuthorsJson @link(by: "email", from: "author")
       sectionFAQ: SectionFAQ

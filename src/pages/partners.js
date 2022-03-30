@@ -1,33 +1,39 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import ReactHtmlParser from "react-html-parser"
+import { remark } from "remark"
+import remarkHTML from "remark-html"
+//import ReactHtmlParser from "react-html-parser"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+const toHTML = value => remark().use(remarkHTML).processSync(value).toString()
+
 const PartnersPage = ({ data, location }) => {
   const frontmatter = data.markdownRemark.frontmatter
-
   const { sectionFAQ, path } = frontmatter
 
   return (
     <Layout location={location} title={path}>
       <Seo title="PartnersPage" />
       <h1>{path}</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
 
       {sectionFAQ.content?.length > 0 && (
         <section>
           <div>
             <div>
               <h2>{sectionFAQ.title}</h2>
-              {sectionFAQ.content.map(({ question }, index) => (
-                <div key={index}>
-                  <div>{question}</div>
-                  {/* <div>{ReactHtmlParser(answer)}</div>
-                  <div>answer</div> */}
-                </div>
-              ))}
+              {sectionFAQ.content.map(({ question, answer }, index) => {
+                const asHTML = toHTML(answer)
+
+                return (
+                  <div key={index}>
+                    <div>{question}</div>
+
+                    <div dangerouslySetInnerHTML={{ __html: asHTML }} />
+                  </div>
+                )
+              })}
             </div>
           </div>
         </section>
@@ -47,6 +53,7 @@ export const pageQuery = graphql`
           title
           content {
             question
+            answer
           }
         }
       }
