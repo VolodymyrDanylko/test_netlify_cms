@@ -36,6 +36,14 @@ const BlogIndex = ({ data, location }) => {
           const image =
             post?.frontmatter?.featuredimage?.childImageSharp?.gatsbyImageData
 
+          const path = post.frontmatter.url
+            ? `/${post.frontmatter.url}/`
+            : post.fields.slug
+
+          console.log("url : ", post.frontmatter.url)
+          console.log("slug : ", post.fields.slug)
+          console.log("path : ", path)
+
           return (
             <li key={post.fields.slug}>
               <article
@@ -45,7 +53,7 @@ const BlogIndex = ({ data, location }) => {
               >
                 <header>
                   <h2>
-                    <Link to={post.fields.slug} itemProp="url">
+                    <Link to={path} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>

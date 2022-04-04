@@ -10,7 +10,7 @@ collections:
     label: Blog
     folder: content/blog
     create: true
-    slug: "{{slug}}"
+    slug: "{{url}}"
     fields:
       - { label: Layout, name: layout, widget: hidden, default: blog }
       - { label: Slug, name: url, widget: string }
