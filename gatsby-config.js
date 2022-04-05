@@ -1,4 +1,5 @@
 module.exports = {
+  trailingSlash: "always",
   siteMetadata: {
     title: `Gatsby Starter Blog`,
     author: {
@@ -127,6 +128,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
+            title: "My blog title",
           },
         ],
       },
