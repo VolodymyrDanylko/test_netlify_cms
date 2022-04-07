@@ -98,6 +98,8 @@ exports.createSchemaCustomization = ({ actions }) => {
       summary: String
     }
 
+    
+
     type SectionFAQ {
       title: String
       content: [Content]
