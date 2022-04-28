@@ -19,6 +19,7 @@ collections:
       - { label: Publish Date, name: date, widget: datetime }
       - { label: Body, name: body, widget: markdown, required: false }
       - { label: image, name: featuredimage, widget: image }
+      - { label: Tag, name: tag, widget: string }
       - {
           label: "Author",
           name: "author",
@@ -28,6 +29,66 @@ collections:
           search_fields: ["name", "email"],
           display_fields: ["name"],
         }
+
+  - name: post
+    label: Post Page
+    folder: content/post
+    widget: object
+    fields:
+      - { label: Layout, name: layout, widget: hidden, default: post }
+      - { name: count, label: Count of Subscribers, widget: number }
+      - name: topArticles
+        label: Top Articles
+        widget: object
+        fields:
+          - {
+              name: All,
+              label: Top All Articles,
+              widget: list,
+              min: 4,
+              max: 4,
+              fields: [{ name: title, label: Title, widget: string }],
+            }
+          - {
+              name: topCryptoArticles,
+              label: Crypto,
+              widget: list,
+              min: 4,
+              max: 4,
+              fields: [{ name: title, label: Title, widget: string }],
+            }
+          - {
+              name: topSMSFArticles,
+              label: SMSF,
+              widget: list,
+              min: 4,
+              max: 4,
+              fields: [{ name: title, label: Title, widget: string }],
+            }
+          - {
+              name: topInvestingArticles,
+              label: Investing,
+              widget: list,
+              min: 4,
+              max: 4,
+              fields: [{ name: title, label: Title, widget: string }],
+            }
+          - {
+              name: topCultureArticles,
+              label: Culture,
+              widget: list,
+              min: 4,
+              max: 4,
+              fields: [{ name: title, label: Title, widget: string }],
+            }
+          - {
+              name: topProductArticles,
+              label: Product,
+              widget: list,
+              min: 4,
+              max: 4,
+              fields: [{ name: title, label: Title, widget: string }],
+            }
 
   - name: authors
     label: Authors
@@ -77,7 +138,6 @@ collections:
   - name: partners
     label: Partners
     folder: content/partners
-    create: true
     widget: object
     fields:
       - { name: path, label: Path }
