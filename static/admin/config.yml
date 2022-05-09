@@ -33,63 +33,69 @@ collections:
   - name: post
     label: Post Page
     folder: content/post
-    create: true
     widget: object
     fields:
       - { label: Layout, name: layout, widget: hidden, default: post }
-      - { name: count, label: Count of Subscribers, widget: number }
-      - name: topArticles
-        label: Top Articles
-        widget: object
+      - { label: Title, name: title, widget: string, default: Blog page }
+      - name: countOfEmailSubscribers
+        label: Count of Email Subscribers
+        widget: number
+      - name: topArticlesSection
+        label: Top Articles Section
+        widget: list
         fields:
+          - name: title
+            label: Ctegory
+            widget: select
+            options: [All, Product, Category, Crypto, SMSF, Investing, Culture]
           - {
-              name: All,
-              label: Top All Articles,
+              name: topArticles,
+              label: List of Top Articles,
               widget: list,
               min: 4,
               max: 4,
               fields: [{ name: title, label: Title, widget: string }],
             }
-          - {
-              name: topCryptoArticles,
-              label: Crypto,
-              widget: list,
-              min: 4,
-              max: 4,
-              fields: [{ name: title, label: Title, widget: string }],
-            }
-          - {
-              name: topSMSFArticles,
-              label: SMSF,
-              widget: list,
-              min: 4,
-              max: 4,
-              fields: [{ name: title, label: Title, widget: string }],
-            }
-          - {
-              name: topInvestingArticles,
-              label: Investing,
-              widget: list,
-              min: 4,
-              max: 4,
-              fields: [{ name: title, label: Title, widget: string }],
-            }
-          - {
-              name: topCultureArticles,
-              label: Culture,
-              widget: list,
-              min: 4,
-              max: 4,
-              fields: [{ name: title, label: Title, widget: string }],
-            }
-          - {
-              name: topProductArticles,
-              label: Product,
-              widget: list,
-              min: 4,
-              max: 4,
-              fields: [{ name: title, label: Title, widget: string }],
-            }
+          # - {
+          #     name: Crypto,
+          #     label: Top Crypto articles,
+          #     widget: list,
+          #     min: 4,
+          #     max: 4,
+          #     fields: [{ name: title, label: Title, widget: string }],
+          #   }
+          # - {
+          #     name: SMSF,
+          #     label: Top SMSF articles,
+          #     widget: list,
+          #     min: 4,
+          #     max: 4,
+          #     fields: [{ name: title, label: Title, widget: string }],
+          #   }
+          # - {
+          #     name: Investing,
+          #     label: Top Investing articles,
+          #     widget: list,
+          #     min: 4,
+          #     max: 4,
+          #     fields: [{ name: title, label: Title, widget: string }],
+          #   }
+          # - {
+          #     name: Culture,
+          #     label: Top Culture articles,
+          #     widget: list,
+          #     min: 4,
+          #     max: 4,
+          #     fields: [{ name: title, label: Title, widget: string }],
+          #   }
+          # - {
+          #     name: Product,
+          #     label: Top Product articles,
+          #     widget: list,
+          #     min: 4,
+          #     max: 4,
+          #     fields: [{ name: title, label: Title, widget: string }],
+          #   }
 
   - name: authors
     label: Authors
