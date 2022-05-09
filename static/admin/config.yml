@@ -33,6 +33,7 @@ collections:
   - name: post
     label: Post Page
     folder: content/post
+    create: true
     widget: object
     fields:
       - { label: Layout, name: layout, widget: hidden, default: post }
