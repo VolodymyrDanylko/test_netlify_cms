@@ -32,17 +32,13 @@ const BlogIndex = ({ data, location }) => {
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
-
+          console.log(post.frontmatter?.countOfEmailSubscribers)
           const image =
             post?.frontmatter?.featuredimage?.childImageSharp?.gatsbyImageData
 
-          const path = post.frontmatter.url
-            ? `/${post.frontmatter.url}/`
-            : post.fields.slug
-
-          console.log("url : ", post.frontmatter.url)
-          console.log("slug : ", post.fields.slug)
-          console.log("path : ", path)
+          // const path = post.frontmatter.url
+          //   ? `/${post.frontmatter.url}/`
+          //   : post.fields.slug
 
           return (
             <li key={post.fields.slug}>
@@ -115,6 +111,7 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
+          countOfEmailSubscribers
           date(formatString: "MMMM DD, YYYY")
           title
           url
