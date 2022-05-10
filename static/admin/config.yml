@@ -31,12 +31,11 @@ collections:
         }
 
   - name: post
-    label: Post Page
-    folder: content/post
-    create: true
+    label: Blog Page
+    folder: content/blog-page
     widget: object
     fields:
-      - { label: Layout, name: layout, widget: hidden, default: post }
+      - { label: Layout, name: layout, widget: hidden, default: blog }
       - { label: Title, name: title, widget: string, default: Blog page }
       - name: countOfEmailSubscribers
         label: Count of Email Subscribers
@@ -44,11 +43,12 @@ collections:
       - name: topArticlesSection
         label: Top Articles Section
         widget: list
+        max: 6
         fields:
-          - name: title
+          - name: category
             label: Ctegory
             widget: select
-            options: [All, Product, Category, Crypto, SMSF, Investing, Culture]
+            options: [All, Product, Crypto, SMSF, Investing, Culture]
           - {
               name: topArticles,
               label: List of Top Articles,
@@ -57,46 +57,6 @@ collections:
               max: 4,
               fields: [{ name: title, label: Title, widget: string }],
             }
-          # - {
-          #     name: Crypto,
-          #     label: Top Crypto articles,
-          #     widget: list,
-          #     min: 4,
-          #     max: 4,
-          #     fields: [{ name: title, label: Title, widget: string }],
-          #   }
-          # - {
-          #     name: SMSF,
-          #     label: Top SMSF articles,
-          #     widget: list,
-          #     min: 4,
-          #     max: 4,
-          #     fields: [{ name: title, label: Title, widget: string }],
-          #   }
-          # - {
-          #     name: Investing,
-          #     label: Top Investing articles,
-          #     widget: list,
-          #     min: 4,
-          #     max: 4,
-          #     fields: [{ name: title, label: Title, widget: string }],
-          #   }
-          # - {
-          #     name: Culture,
-          #     label: Top Culture articles,
-          #     widget: list,
-          #     min: 4,
-          #     max: 4,
-          #     fields: [{ name: title, label: Title, widget: string }],
-          #   }
-          # - {
-          #     name: Product,
-          #     label: Top Product articles,
-          #     widget: list,
-          #     min: 4,
-          #     max: 4,
-          #     fields: [{ name: title, label: Title, widget: string }],
-          #   }
 
   - name: authors
     label: Authors
