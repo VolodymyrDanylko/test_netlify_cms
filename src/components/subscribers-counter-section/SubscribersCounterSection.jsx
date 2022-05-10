@@ -1,5 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+import CountUp from "react-countup"
 
 const SubscribersCounterSection = () => (
   <StaticQuery
@@ -16,7 +17,12 @@ const SubscribersCounterSection = () => (
       <section>
         <div>
           <div>
-            {data?.markdownRemark?.frontmatter?.countOfEmailSubscribers}
+            <CountUp
+              start={0}
+              end={data?.markdownRemark?.frontmatter?.countOfEmailSubscribers}
+              duration={5}
+              separator=","
+            />
           </div>
           <span>email subscribers</span>
         </div>
