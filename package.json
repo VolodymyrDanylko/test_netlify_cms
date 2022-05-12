@@ -32,6 +32,7 @@
     "netlify-cms-app": "^2.15.44",
     "prismjs": "^1.24.1",
     "react": "^17.0.1",
+    "react-countup": "^6.2.0",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-html-parser": "^2.0.2",

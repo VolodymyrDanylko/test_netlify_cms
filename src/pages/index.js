@@ -5,6 +5,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import SubscribersCounterSection from "../components/subscribers-counter-section/SubscribersCounterSection"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -29,20 +30,17 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
       <Bio />
+      <SubscribersCounterSection />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
-
+          console.log(post.frontmatter?.countOfEmailSubscribers)
           const image =
             post?.frontmatter?.featuredimage?.childImageSharp?.gatsbyImageData
 
-          const path = post.frontmatter.url
-            ? `/${post.frontmatter.url}/`
-            : post.fields.slug
-
-          console.log("url : ", post.frontmatter.url)
-          console.log("slug : ", post.fields.slug)
-          console.log("path : ", path)
+          // const path = post.frontmatter.url
+          //   ? `/${post.frontmatter.url}/`
+          //   : post.fields.slug
 
           return (
             <li key={post.fields.slug}>
@@ -108,13 +106,17 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { layout: { eq: "blog" } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       nodes {
         excerpt
         fields {
           slug
         }
         frontmatter {
+          countOfEmailSubscribers
           date(formatString: "MMMM DD, YYYY")
           title
           url
