@@ -10,11 +10,37 @@ const BlogPostTemplate = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
 
+  const schemaMarkup = `{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.getbamboo.io/blog/what-is-ethereums-merge-upgrade/"
+    },
+    "headline": "14 Best Crypto Mining Software in 2022",
+    "description": "Do you want to learn what the Best Crypto Mining Software is? Check out this post to learn more.",
+    "image": "https://www.getbamboo.io/assets/Bamboo_SocialShare.jpg",  
+    "author": {
+      "@type": "Person",
+      "name": "Volodymyr"
+    },  
+    "publisher": {
+      "@type": "Organization",
+      "name": "Dany",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.getbamboo.io/assets/bamboologo.png"
+      }
+    },
+    "datePublished": "2022-05-19"
+  }`
+
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        schemaMarkup={schemaMarkup}
       />
       <article
         className="blog-post"

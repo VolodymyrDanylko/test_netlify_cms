@@ -26,6 +26,8 @@ const SubscribersCounterSection = () => {
     `
   )
 
+  console.log(data.markdownRemark.frontmatter.countOfEmailSubscribers)
+
   return (
     <section>
       <div>
