@@ -36,33 +36,6 @@ const BlogPostTemplate = ({ data, location }) => {
     "datePublished": "${post.frontmatter.date}"
   }`
 
-  // const schemaMarkup = `{
-  //   "@context": "https://schema.org",
-  //   "@type": "BlogPosting",
-  //   "mainEntityOfPage": {
-  //     "@type": "WebPage",
-  //     "@id": "${SITE_URL}${path}"
-  //   },
-  //   "headline": "${frontmatter.title}",
-  //   "description": "${frontmatter.description || excerpt || DESCRIPTION}",
-  //   "image": "${
-  //     socialSharingImage && DEFAULT_IMAGE_FOLDER + socialSharingImage
-  //   }",
-  //   "author": {
-  //     "@type": "Person",
-  //     "name": "${author.frontmatter.name}"
-  //   },
-  //   "publisher": {
-  //     "@type": "Organization",
-  //     "name": "${BAMBOO_ORGANIZATION_NAME}",
-  //     "logo": {
-  //       "@type": "ImageObject",
-  //       "url": "${BAMBOO_LOGO_SRC}"
-  //     }
-  //   },
-  //   "datePublished": "${frontmatter.date}"
-  // }`
-
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
@@ -70,27 +43,25 @@ const BlogPostTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
         schemaMarkup={schemaMarkup}
       />
-      <article
+      <section
         className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
+        // itemScope
+        // itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          {/* <h1 itemProp="headline">{post.frontmatter.title}</h1> */}
+          <h1>{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
-          {/* {post.frontmatter.image && (
-            <img width={540} src={post.frontmatter.image} alt="post avatar" />
-          )} */}
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
+          // itemProp="articleBody"
         />
         <hr />
         <footer>
           <Bio />
         </footer>
-      </article>
+      </section>
       <nav className="blog-post-nav">
         <ul
           style={{
