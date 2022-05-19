@@ -8,14 +8,15 @@ import Seo from "../components/seo"
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  const slug = post.fields.slug
   const { previous, next } = data
 
   const schemaMarkup = `{
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.getbamboo.io/blog/what-is-ethereums-merge-upgrade/"
+      "@id": "https://dani-blog.netlify.app${slug}"
     },
     "headline": "${post.frontmatter.title}",
     "description": "${post.frontmatter.description || post.excerpt}",
@@ -34,6 +35,33 @@ const BlogPostTemplate = ({ data, location }) => {
     },
     "datePublished": "${post.frontmatter.date}"
   }`
+
+  // const schemaMarkup = `{
+  //   "@context": "https://schema.org",
+  //   "@type": "BlogPosting",
+  //   "mainEntityOfPage": {
+  //     "@type": "WebPage",
+  //     "@id": "${SITE_URL}${path}"
+  //   },
+  //   "headline": "${frontmatter.title}",
+  //   "description": "${frontmatter.description || excerpt || DESCRIPTION}",
+  //   "image": "${
+  //     socialSharingImage && DEFAULT_IMAGE_FOLDER + socialSharingImage
+  //   }",
+  //   "author": {
+  //     "@type": "Person",
+  //     "name": "${author.frontmatter.name}"
+  //   },
+  //   "publisher": {
+  //     "@type": "Organization",
+  //     "name": "${BAMBOO_ORGANIZATION_NAME}",
+  //     "logo": {
+  //       "@type": "ImageObject",
+  //       "url": "${BAMBOO_LOGO_SRC}"
+  //     }
+  //   },
+  //   "datePublished": "${frontmatter.date}"
+  // }`
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -106,7 +134,11 @@ export const pageQuery = graphql`
         title
       }
     }
+
     markdownRemark(id: { eq: $id }) {
+      fields {
+        slug
+      }
       id
       excerpt(pruneLength: 160)
       html
