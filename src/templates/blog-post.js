@@ -17,8 +17,8 @@ const BlogPostTemplate = ({ data, location }) => {
       "@type": "WebPage",
       "@id": "https://www.getbamboo.io/blog/what-is-ethereums-merge-upgrade/"
     },
-    "headline": "14 Best Crypto Mining Software in 2022",
-    "description": "Do you want to learn what the Best Crypto Mining Software is? Check out this post to learn more.",
+    "headline": "${post.frontmatter.title}",
+    "description": "${post.frontmatter.description || post.excerpt}",
     "image": "https://www.getbamboo.io/assets/Bamboo_SocialShare.jpg",  
     "author": {
       "@type": "Person",
@@ -32,7 +32,7 @@ const BlogPostTemplate = ({ data, location }) => {
         "url": "https://www.getbamboo.io/assets/bamboologo.png"
       }
     },
-    "datePublished": "2022-05-19"
+    "datePublished": "${post.frontmatter.date}"
   }`
 
   return (
