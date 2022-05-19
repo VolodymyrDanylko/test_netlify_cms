@@ -3,9 +3,10 @@ import { graphql } from "gatsby"
 
 export default function LegalTemplate({ data }) {
   const { markdownRemark } = data
-  const { html, seoTitle, seoDescription, title } = markdownRemark
-
-  console.log(seoTitle, seoDescription)
+  const {
+    html,
+    frontmatter: { title },
+  } = markdownRemark
 
   return (
     <>
@@ -24,8 +25,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         path
-        seoTitle
-        seoDescription
         title
       }
     }

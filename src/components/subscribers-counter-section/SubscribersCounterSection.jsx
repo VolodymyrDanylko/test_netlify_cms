@@ -1,34 +1,46 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import CountUp from "react-countup"
 
-const SubscribersCounterSection = () => (
-  <StaticQuery
-    query={graphql`
-      query BlogPageQuery {
+const SubscribersCounterSection = () => {
+  // <StaticQuery
+  //   query={graphql`
+  //     query BlogPageQuery {
+  //       markdownRemark(frontmatter: { layout: { eq: "post" } }) {
+  //         frontmatter {
+  //           countOfEmailSubscribers
+  //         }
+  //       }
+  //     }
+  //   `}
+
+  const data = useStaticQuery(
+    graphql`
+      query {
         markdownRemark(frontmatter: { layout: { eq: "post" } }) {
           frontmatter {
             countOfEmailSubscribers
           }
         }
       }
-    `}
-    render={data => (
-      <section>
+    `
+  )
+
+  return (
+    <section>
+      <div>
         <div>
-          <div>
-            <CountUp
-              start={0}
-              end={data?.markdownRemark?.frontmatter?.countOfEmailSubscribers}
-              duration={5}
-              separator=","
-            />
-          </div>
-          <span>email subscribers</span>
+          <CountUp
+            start={0}
+            end={data?.markdownRemark?.frontmatter?.countOfEmailSubscribers}
+            duration={5}
+            separator=","
+          />
         </div>
-      </section>
-    )}
-  />
-)
+        <span>email subscribers</span>
+      </div>
+    </section>
+  )
+}
 
 export default SubscribersCounterSection
