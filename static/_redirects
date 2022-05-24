@@ -1,0 +1,3 @@
+# Redirect users in USA to /us.
+# There CANNOT be spaces in the last parameter: Country=x,y,z or Language=xx,yy
+/  /us     302  Country=us
