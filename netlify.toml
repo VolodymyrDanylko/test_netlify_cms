@@ -1,2 +1,17 @@
 
 
+[[redirects]]
+  from = "/"
+  to = "/us/"
+  status = 302
+  force = true
+  conditions = {Country = ["US"]}
+  
+[[redirects]]
+  from = "/*"
+  to = "/us/:splat"
+  status = 302
+  force = true
+  conditions = {Country = ["US"]}
+
+
