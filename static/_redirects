@@ -1,4 +1,0 @@
-# Redirect users in USA to /us.
-# There CANNOT be spaces in the last parameter: Country=x,y,z or Language=xx,yy
-/        /ua                 302  Country=ua
-/blog/*  /us/blog/:splat     302  Country=us
