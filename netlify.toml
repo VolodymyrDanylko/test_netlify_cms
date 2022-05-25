@@ -5,3 +5,19 @@
   status = 302
   force = true
   conditions = {Country = ["UA"]}
+
+[[redirects]]
+  from = "/"
+  to = "/us/:splat"
+  status = 302
+  force = true
+  conditions = {Country = ["US"]}
+  
+[[redirects]]
+  from = "/*"
+  to = "/us/:splat"
+  status = 302
+  force = true
+  conditions = {Country = ["US"]}
+
+
