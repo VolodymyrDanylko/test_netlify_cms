@@ -1,7 +1,7 @@
 # A basic redirect rule
 [[redirects]]
-  from = "/partners"
-  to = "/ua/partners"
+  from = "/partners/*"
+  to = "/ua/partners/:splat"
   status = 302
   force = true
   conditions = {Country = ["UA"]}
