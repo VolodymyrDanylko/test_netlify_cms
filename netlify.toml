@@ -1,10 +1,4 @@
-# A basic redirect rule
-[[redirects]]
-  from = "/*"
-  to = "/ua/:splat"
-  status = 302
-  force = true
-  conditions = {Country = ["UA"]}
+
 
 [[redirects]]
   from = "/"
