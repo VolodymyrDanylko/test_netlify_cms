@@ -1,12 +1,13 @@
 ---
-path: /legal/privacy-policy/
+path: /ua/legal/privacy-policy/
 seoTitle: Privacy Policy
 seoDescription: Privacy Policy description
 title: Privacy Policy
 ---
+
 # Privacy Policy
 
-Bamboo 61 Pty Ltd (**“Bamboo”, “we”, “our”, “us”**) are committed to protecting your privacy in accordance with the *Privacy Act 1988 (Cth)* in Australia.
+Bamboo 61 Pty Ltd (**“Bamboo”, “we”, “our”, “us”**) are committed to protecting your privacy in accordance with the _Privacy Act 1988 (Cth)_ in Australia.
 
 This Privacy Policy describes our policies and practices in relation to how we collect, store, use and disclose your personal information. It also explains how you can complain about a breach of the privacy laws, how you can access the personal information we hold about you and how to have that information corrected.
 
@@ -28,11 +29,11 @@ The main purpose for which we collect, hold, use and disclose your personal info
 
 Other purposes include to:
 
-* Provide our services, manage your ongoing requirements and our ongoing relationship with you;
-* Undertake research that will assist us to improve our mobile application and website, and develop our services;
-* Perform internal functions such as administration, accounting and information technology system requirements;
-* Comply with legal and regulatory requirements and prevent fraud or crime; and
-* Refer you to other businesses whose services may be of interest to you.
+- Provide our services, manage your ongoing requirements and our ongoing relationship with you;
+- Undertake research that will assist us to improve our mobile application and website, and develop our services;
+- Perform internal functions such as administration, accounting and information technology system requirements;
+- Comply with legal and regulatory requirements and prevent fraud or crime; and
+- Refer you to other businesses whose services may be of interest to you.
 
 We may also send you offers, updates, articles, newsletters or other information about our services and other products and services that we believe will be of interest to you. You may opt out of this at any time by getting in contact with us.
 
@@ -62,11 +63,11 @@ By providing us with personal information, you consent to the terms of this Priv
 
 We may disclose your personal information to:
 
-* Our agents and contractors who supply services to us e.g. software providers, IT services and hosting, data storage providers, marketing, administration services, compliance consultants and auditors
-* Other companies in the event of a corporate sale, merger, reorganisation, dissolution or similar event
-* Regulatory bodies, government agencies or law enforcement bodies
-* Anyone who refers you to us or who you refer to us, and
-* Others, if we are permitted to or required to do so by law.
+- Our agents and contractors who supply services to us e.g. software providers, IT services and hosting, data storage providers, marketing, administration services, compliance consultants and auditors
+- Other companies in the event of a corporate sale, merger, reorganisation, dissolution or similar event
+- Regulatory bodies, government agencies or law enforcement bodies
+- Anyone who refers you to us or who you refer to us, and
+- Others, if we are permitted to or required to do so by law.
 
 We do not sell, trade, licence or rent your personal information.
 
@@ -78,16 +79,17 @@ If we disclose your information to any businesses who are located overseas, we w
 
 If you are a resident of the State of California, under the California Consumer Privacy Act (CCPA), you have the right to request information on how to exercise your disclosure choice options from companies conducting business in California. Specifically:
 
-* **Exercising the Right to Know.** You may request, up to twice in a 12-month period, the following about the personal information collected on you in the past 12 months:
+- **Exercising the Right to Know.** You may request, up to twice in a 12-month period, the following about the personal information collected on you in the past 12 months:
 
-  * the categories and specific pieces of personal information we have collected;
-  * the categories of sources from which we collected the personal information;
-  * the business or commercial purpose for which we collected it;
-  * the categories of third parties with whom we shared the personal information; and
-  * the categories of personal information about you that we disclosed for a business purpose.
-* **Exercising the right to delete.** You may request that we delete the personal information we have collected from you, subject to certain limitations under applicable law.
-* **Exercising the right to opt-out from a sale.** You may request to opt out of any “sale” of your personal information that may take place.
-* **Non-discrimination.** The CCPA provides that you may not be discriminated against for exercising these rights.
+  - the categories and specific pieces of personal information we have collected;
+  - the categories of sources from which we collected the personal information;
+  - the business or commercial purpose for which we collected it;
+  - the categories of third parties with whom we shared the personal information; and
+  - the categories of personal information about you that we disclosed for a business purpose.
+
+- **Exercising the right to delete.** You may request that we delete the personal information we have collected from you, subject to certain limitations under applicable law.
+- **Exercising the right to opt-out from a sale.** You may request to opt out of any “sale” of your personal information that may take place.
+- **Non-discrimination.** The CCPA provides that you may not be discriminated against for exercising these rights.
 
 To submit a request to exercise any of the rights described above, you may contact Bamboo either via email to [privacy@getbamboo.io](mailto:privacy@getbamboo.io) or contact us via postal mail, proper postage prepaid, at:
 
@@ -130,10 +132,10 @@ Please be aware that we may change this policy in the future. We may modify this
 
 You have a right to:
 
-* Request access your personal information and to ask us to correct or erase it, subject to exceptions allowed by law
-* Ask us to restrict the way we manage your personal information (for example if you dispute the correctness of the information)
-* Request that we transfer your data to another entity, and
-* Object to us managing your personal information at any time (e.g., you can withdraw any consent you have given us to manage your personal information). This does not invalidate the legality of our management of your personal information before your consent is withdrawn).
+- Request access your personal information and to ask us to correct or erase it, subject to exceptions allowed by law
+- Ask us to restrict the way we manage your personal information (for example if you dispute the correctness of the information)
+- Request that we transfer your data to another entity, and
+- Object to us managing your personal information at any time (e.g., you can withdraw any consent you have given us to manage your personal information). This does not invalidate the legality of our management of your personal information before your consent is withdrawn).
 
 For security reasons, we may require you to put your request in writing. We reserve the right to charge a fee for each request to search for and provide access to your information.
 

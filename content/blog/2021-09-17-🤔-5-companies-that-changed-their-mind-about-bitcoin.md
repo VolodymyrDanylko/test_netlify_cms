@@ -1,5 +1,6 @@
 ---
 layout: blog
+country: us
 title: 🤔 5 companies that changed their mind about Bitcoin.
 date: 2021-09-17T09:54:30.330Z
 image: /images/uploads/bamboo_lifestyleshoot-js-web-104.jpg
@@ -23,8 +24,6 @@ While Dimon insists that his personal views on the crypto market haven’t chang
 # Goldman Sachs
 
 After publishing an article in early 2020 stating that “Cryptocurrencies, including bitcoin, are not an asset class,” major investment bank Goldman Sachs has since changed its tune. A new [study](https://www.goldmansachs.com/insights/pages/crypto-a-new-asset-class.html) released earlier this year by the company notes how “the intrinsic characteristics of certain cryptocurrencies allow them to attract a specific user base.” In particular, the Goldman Sachs report mentions Bitcoin’s high market cap, Ethereum’s smart contracts, XRP’s real-time settlement, and Polkadot’s cross-chain capabilities.
-
-
 
 ![some test alt](assets/craig.png)
 

@@ -1,6 +1,7 @@
 ---
 layout: blog
 url: some-slug
+country: ua
 title: Test title
 description: Test description
 date: 2022-03-30T09:34:51.208Z

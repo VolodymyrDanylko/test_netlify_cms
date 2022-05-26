@@ -1,10 +1,17 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import React, { useState } from "react"
+import { Link, navigate } from "gatsby"
 
 const Layout = ({ location, title, children }) => {
+  const [optionsState, setState] = useState(
+    location?.pathname.replaceAll("/", "")
+  )
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
+
+  // useEffect(() => {
+  //   navigate(`/${optionsState}`)
+  // }, [optionsState])
 
   if (isRootPath) {
     header = (
@@ -20,9 +27,19 @@ const Layout = ({ location, title, children }) => {
     )
   }
 
+  const handleOptionChange = event => {
+    setState(event.target.value)
+
+    navigate(`/${event.target.value}`)
+  }
+  console.log(optionsState)
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">{header}</header>
+      <select value={optionsState} onChange={handleOptionChange}>
+        <option value="us">US</option>
+        <option value="ua">UA</option>
+      </select>
       <main>{children}</main>
       <footer>
         © {new Date().getFullYear()}, Built with

@@ -26,6 +26,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               layout
               url
               path
+              country
             }
           }
         }
@@ -41,15 +42,32 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const posts = result.data.allMarkdownRemark.nodes.filter(
-    node => node.frontmatter.layout === "blog"
+  const postsUS = result.data.allMarkdownRemark.nodes.filter(
+    node =>
+      node.frontmatter.layout === "blog" && node.frontmatter.country === "us"
+  )
+  const postsUA = result.data.allMarkdownRemark.nodes.filter(
+    node =>
+      node.frontmatter.layout === "blog" && node.frontmatter.country === "ua"
   )
 
-  const legalPages = result.data.allMarkdownRemark.nodes.filter(node =>
-    node?.frontmatter?.path?.startsWith("/legal/")
+  const legalPagesUS = result.data.allMarkdownRemark.nodes.filter(node =>
+    node?.frontmatter?.path?.startsWith("/us/legal/")
   )
 
-  legalPages?.forEach(node => {
+  legalPagesUS?.forEach(node => {
+    createPage({
+      path: node.frontmatter.path,
+      component: legalTemplate,
+      context: {},
+    })
+  })
+
+  const legalPagesUA = result.data.allMarkdownRemark.nodes.filter(node =>
+    node?.frontmatter?.path?.startsWith("/ua/legal/")
+  )
+
+  legalPagesUA?.forEach(node => {
     createPage({
       path: node.frontmatter.path,
       component: legalTemplate,
@@ -71,15 +89,36 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
   // `context` is available in the template as a prop and as a variable in GraphQL
 
-  if (posts.length > 0) {
-    posts.forEach((post, index) => {
-      const previousPostId = index === 0 ? null : posts[index - 1].id
-      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
-      const path = post.frontmatter.url
-        ? post.frontmatter.url
-        : post.fields.slug
+  if (postsUS.length > 0) {
+    postsUS.forEach((post, index) => {
+      const previousPostId = index === 0 ? null : postsUS[index - 1].id
+      const nextPostId =
+        index === postsUS.length - 1 ? null : postsUS[index + 1].id
+      // const path = post.frontmatter.url
+      //   ? post.frontmatter.url
+      //   : post.fields.slug
       createPage({
-        path: post.fields.slug,
+        path: "us" + post.fields.slug,
+        component: blogPost,
+        context: {
+          id: post.id,
+          previousPostId,
+          nextPostId,
+        },
+      })
+    })
+  }
+
+  if (postsUA.length > 0) {
+    postsUA.forEach((post, index) => {
+      const previousPostId = index === 0 ? null : postsUA[index - 1].id
+      const nextPostId =
+        index === postsUA.length - 1 ? null : postsUA[index + 1].id
+      // const path = post.frontmatter.url
+      //   ? post.frontmatter.url
+      //   : post.fields.slug
+      createPage({
+        path: "ua" + post.fields.slug,
         component: blogPost,
         context: {
           id: post.id,

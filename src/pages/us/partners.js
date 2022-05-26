@@ -4,8 +4,8 @@ import { remark } from "remark"
 import remarkHTML from "remark-html"
 //import ReactHtmlParser from "react-html-parser"
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from "../../components/layout"
+import Seo from "../../components/seo"
 
 const toHTML = value => remark().use(remarkHTML).processSync(value).toString()
 
@@ -45,7 +45,7 @@ const PartnersPage = ({ data, location }) => {
 export default PartnersPage
 
 export const pageQuery = graphql`
-  query($path: String!) {
+  query ($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       frontmatter {
         path

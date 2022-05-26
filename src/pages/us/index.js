@@ -2,10 +2,10 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import SubscribersCounterSection from "../components/subscribers-counter-section/SubscribersCounterSection"
+import Bio from "../../components/bio"
+import Layout from "../../components/layout"
+import Seo from "../../components/seo"
+import SubscribersCounterSection from "../../components/subscribers-counter-section/SubscribersCounterSection"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -51,7 +51,10 @@ const BlogIndex = ({ data, location }) => {
               >
                 <header>
                   <h2>
-                    <Link to={post.fields.slug} itemProp="url">
+                    <Link
+                      to={location.pathname.slice(0, -1) + post.fields.slug}
+                      itemProp="url"
+                    >
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
@@ -107,7 +110,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      filter: { frontmatter: { layout: { eq: "blog" } } }
+      filter: { frontmatter: { layout: { eq: "blog" }, country: { eq: "us" } } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       nodes {

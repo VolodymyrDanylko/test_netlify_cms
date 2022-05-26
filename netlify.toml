@@ -1,18 +1,26 @@
 # A basic redirect rule
 
-[[redirects]]
-  from = "/blog/*"
-  to = "https://us-dany-blog.netlify.app/blog/:splat"
-  status = 200
-  force = true
-  conditions = {Country = ["US"]}
-  headers = {X-From = "Dany-blog"}
+#[[redirects]]
+  #from = "/*"
+  #to = "/ua/:splat"
+  #status = 200
+  #force = true
+  #conditions = {Country = ["US"]}
+  #headers = {X-From = "Dany-blog"}
+
+#[[redirects]]
+#  from = "/blog/*"
+#  to = "https://us-dany-blog.netlify.app/blog/:splat"
+#  status = 200
+#  force = true
+#  conditions = {Country = ["US"]}
+#  headers = {X-From = "Dany-blog"}
   
-[[redirects]]
-  from = "/*"
-  to = "/us/:splat"
-  status = 302
-  force = true
-  conditions = {Country = ["US"]}
+#[[redirects]]
+#  from = "/*"
+#  to = "/us/:splat"
+#  status = 302
+#  force = true
+#  conditions = {Country = ["US"]}
 
 

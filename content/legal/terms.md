@@ -1,5 +1,5 @@
 ---
-path: /legal/terms/
+path: /ua/legal/terms/
 seoTitle: Terms and conditions
 seoDescription: Terms and conditions description
 title: Terms

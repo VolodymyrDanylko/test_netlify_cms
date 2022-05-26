@@ -1,5 +1,6 @@
 ---
 layout: blog
+country: ua
 url: spme-new-url
 title: Title 23
 description: Some test desc
