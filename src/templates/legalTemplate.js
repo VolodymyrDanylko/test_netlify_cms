@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Layout from "../components/layout"
 
 export default function LegalTemplate({ data }) {
   const { markdownRemark } = data
@@ -9,13 +10,13 @@ export default function LegalTemplate({ data }) {
   } = markdownRemark
 
   return (
-    <>
+    <Layout>
       <h3 className="stickyTitle">{title}</h3>
       <div
         className="privacyContent"
         dangerouslySetInnerHTML={{ __html: html }}
       />
-    </>
+    </Layout>
   )
 }
 
