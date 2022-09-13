@@ -17,17 +17,17 @@ const getStaticProps = async () => {
     "Authorization",
     "Bearer dG9rOjFkOGIzODRmXzEyY2ZfNDRjMV85NDg3Xzk3NDFjYTE3OGZmMjoxOjA="
   )
+  myHeaders.append("Accept", "application/json")
   myHeaders.append("Content-Type", "application/json")
-  myHeaders.append("Origin", "https://us-dany-blog.netlify.app")
+  //myHeaders.append("Origin", "https://us-dany-blog.netlify.app")
 
   const requestOptions = {
     method: "GET",
     headers: myHeaders,
-    redirect: "follow",
   }
 
-  fetch("https://api.intercom.io/articles", requestOptions)
-    .then(response => response.text())
+  fetch("https://api.intercom.io/help_center/collections", requestOptions)
+    .then(response => response.json())
     .then(result => console.log(result))
     .catch(error => console.log("error", error))
 }
