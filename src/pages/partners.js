@@ -18,11 +18,10 @@ const getStaticProps = async () => {
     "Bearer dG9rOjFkOGIzODRmXzEyY2ZfNDRjMV85NDg3Xzk3NDFjYTE3OGZmMjoxOjA="
   )
   myHeaders.append("Content-Type", "application/json")
-  //myHeaders.append("Origin", "https://api.intercom.io")
+  myHeaders.append("Origin", "https://us-dany-blog.netlify.app")
 
   const requestOptions = {
     method: "GET",
-    mode: "same-origin",
     headers: myHeaders,
     redirect: "follow",
   }
