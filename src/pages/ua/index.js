@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
+import useSWR from "swr"
 
 import Bio from "../../components/bio"
 import Layout from "../../components/layout"
@@ -8,6 +9,31 @@ import Seo from "../../components/seo"
 import SubscribersCounterSection from "../../components/subscribers-counter-section/SubscribersCounterSection"
 
 const BlogIndex = ({ data, location }) => {
+  const fetchWithToken = async (url, token) => {
+    const headers = new Headers()
+
+    headers.append("Content-Type", "application/json")
+    headers.append("Accept", "application/json")
+    headers.append("Authorization", `Bearer ${token}`)
+
+    const response = await fetch(url, {
+      method: "GET",
+      headers,
+    })
+
+    return response
+  }
+
+  const { data: collections } = useSWR(
+    [
+      "https://api.intercom.io/help_center/collections",
+      "dG9rOjFkOGIzODRmXzEyY2ZfNDRjMV85NDg3Xzk3NDFjYTE3OGZmMjoxOjA=",
+    ],
+    fetchWithToken
+  )
+
+  console.log(collections)
+
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
   // const podcasts = data.allPodcastJson.nodes
