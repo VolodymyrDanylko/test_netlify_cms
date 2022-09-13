@@ -10,6 +10,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
+    "fetch-to-curl": "^0.5.2",
     "gatsby": "4.7.2",
     "gatsby-plugin-feed": "^4.0.0",
     "gatsby-plugin-google-analytics": "^3.13.0",
